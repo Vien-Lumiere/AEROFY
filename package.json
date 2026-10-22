@@ -1,0 +1,29 @@
+{
+  "name": "aerofy-esp32-monitor",
+  "version": "1.0.0",
+  "description": "AEROFY · ESP32C3 Telemetry Command Center for Environmental Monitoring",
+  "main": "server.js",
+  "type": "module",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node server.js",
+    "serve": "npx serve ."
+  },
+  "keywords": [
+    "aerofy",
+    "esp32",
+    "esp32c3",
+    "telemetry",
+    "iot",
+    "dashboard",
+    "monitoring"
+  ],
+  "author": "AEROFY Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.19.2"
+  },
+  "engines": {
+    "node": ">=18.0.0"
+  }
+}
