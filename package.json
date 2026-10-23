@@ -7,7 +7,9 @@
   "scripts": {
     "start": "node server.js",
     "dev": "node server.js",
-    "serve": "npx serve ."
+    "serve": "npx serve .",
+    "build:cf": "rm -rf dist && mkdir dist && cp index.html dist/ && cp -r assets dist/",
+    "deploy:cf": "npm run build:cf && npx wrangler deploy"
   },
   "keywords": [
     "aerofy",
