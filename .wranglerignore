@@ -1,0 +1,29 @@
+# Cloudflare Wrangler — exclude file-file yang tidak perlu di-deploy
+
+# Dependencies (penyebab error utama!)
+node_modules/
+
+# Source firmware & hardware (bukan bagian dari web)
+firmware/
+buat_farah/
+
+# Docker & server config (tidak relevan di Cloudflare static)
+Dockerfile
+Procfile
+server.js
+
+# Environment & secrets
+.env
+.env.*
+
+# Git
+.git/
+
+# Platform lain
+.vercel/
+netlify.toml
+vercel.json
+
+# Dev files
+package-lock.json
+README.md
