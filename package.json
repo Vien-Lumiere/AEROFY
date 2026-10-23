@@ -1,29 +1,28 @@
 {
   "name": "aerofy-esp32-monitor",
   "version": "1.0.0",
-  "description": "AEROFY · ESP32C3 Telemetry Command Center for Environmental Monitoring",
-  "main": "server.js",
+  "description": "AEROFY · ESP32 Telemetry Dashboard for Environmental Monitoring",
   "type": "module",
   "scripts": {
+    "dev": "vite",
+    "build": "vite build",
+    "preview": "vite preview",
     "start": "node server.js",
-    "dev": "node server.js",
-    "serve": "npx serve .",
-    "build:cf": "rm -rf dist && mkdir dist && cp index.html dist/ && cp -r assets dist/",
-    "deploy:cf": "npm run build:cf && npx wrangler deploy"
+    "deploy:cf": "vite build && npx wrangler deploy"
   },
-  "keywords": [
-    "aerofy",
-    "esp32",
-    "esp32c3",
-    "telemetry",
-    "iot",
-    "dashboard",
-    "monitoring"
-  ],
+  "keywords": ["aerofy", "esp32", "telemetry", "iot", "dashboard", "monitoring"],
   "author": "AEROFY Team",
   "license": "MIT",
   "dependencies": {
-    "express": "^4.19.2"
+    "chart.js": "^4.4.0",
+    "express": "^4.19.2",
+    "react": "^18.3.1",
+    "react-chartjs-2": "^5.2.0",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-react": "^4.3.1",
+    "vite": "^5.4.0"
   },
   "engines": {
     "node": ">=18.0.0"
